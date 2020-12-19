@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="yourImageCell" rowHeight="100" id="RHl-jG-17x" customClass="YourImageCell" customModule="ANGLERS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RHl-jG-17x" id="uaN-6k-jZG">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqf-1Z-d8j">
+                        <rect key="frame" x="16" y="11" width="77" height="77"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="77" id="6hU-K7-Ajg"/>
+                            <constraint firstAttribute="width" constant="77" id="O1h-Gp-y9t"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="魚の名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZc-nY-IdQ">
+                        <rect key="frame" x="246" y="38" width="74" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="bUI-TR-IIh"/>
+                            <constraint firstAttribute="height" constant="21" id="nCG-mg-POd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acu-Z1-KKp">
+                        <rect key="frame" x="110" y="38" width="74" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="6oM-lZ-0VF"/>
+                            <constraint firstAttribute="height" constant="21" id="XZ9-d3-6cl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fish" translatesAutoresizingMaskIntoConstraints="NO" id="P4u-yf-WzB">
+                        <rect key="frame" x="201" y="38" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="PCn-cG-XHM"/>
+                            <constraint firstAttribute="width" constant="25" id="y9x-DE-nLy"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qZc-nY-IdQ" firstAttribute="leading" secondItem="P4u-yf-WzB" secondAttribute="trailing" constant="20" id="0iU-KV-b7a"/>
+                    <constraint firstAttribute="bottom" secondItem="qZc-nY-IdQ" secondAttribute="bottom" constant="39" id="69A-BQ-0Td"/>
+                    <constraint firstItem="Acu-Z1-KKp" firstAttribute="leading" secondItem="eqf-1Z-d8j" secondAttribute="trailing" constant="17" id="AsC-DW-g25"/>
+                    <constraint firstAttribute="bottom" secondItem="P4u-yf-WzB" secondAttribute="bottom" constant="35" id="EaD-IP-jwk"/>
+                    <constraint firstAttribute="trailing" secondItem="qZc-nY-IdQ" secondAttribute="trailing" id="Ix1-SR-Ot9"/>
+                    <constraint firstItem="eqf-1Z-d8j" firstAttribute="leading" secondItem="uaN-6k-jZG" secondAttribute="leading" constant="16" id="Jm1-Gi-VqB"/>
+                    <constraint firstItem="Acu-Z1-KKp" firstAttribute="top" secondItem="uaN-6k-jZG" secondAttribute="top" constant="38" id="SYY-FB-LAW"/>
+                    <constraint firstAttribute="bottom" secondItem="Acu-Z1-KKp" secondAttribute="bottom" constant="39" id="U5z-MW-R9y"/>
+                    <constraint firstItem="eqf-1Z-d8j" firstAttribute="top" secondItem="uaN-6k-jZG" secondAttribute="top" constant="11" id="UL8-W5-vAd"/>
+                    <constraint firstItem="qZc-nY-IdQ" firstAttribute="top" secondItem="uaN-6k-jZG" secondAttribute="top" constant="38" id="j6P-EZ-2Du"/>
+                    <constraint firstItem="P4u-yf-WzB" firstAttribute="leading" secondItem="Acu-Z1-KKp" secondAttribute="trailing" constant="17" id="keV-fJ-1J4"/>
+                    <constraint firstItem="P4u-yf-WzB" firstAttribute="top" secondItem="uaN-6k-jZG" secondAttribute="top" constant="38" id="m03-Ac-HZK"/>
+                    <constraint firstAttribute="bottom" secondItem="eqf-1Z-d8j" secondAttribute="bottom" constant="10" id="xIj-rJ-pwg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="u4R-NC-Jkj"/>
+            <connections>
+                <outlet property="yourImageLabel" destination="qZc-nY-IdQ" id="ozw-ys-xXF"/>
+                <outlet property="yourImageView" destination="eqf-1Z-d8j" id="Kz9-fP-VDA"/>
+                <outlet property="yourName" destination="Acu-Z1-KKp" id="f9r-GC-U0X"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="58"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="fish" width="512" height="512"/>
+    </resources>
+</document>
