@@ -43,7 +43,6 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
         
         tableView.register(UINib(nibName: "YourMessageCell", bundle: nil), forCellReuseIdentifier: "YourCell")
         
-        tableView.register(UINib(nibName: "message1Cell", bundle: nil), forCellReuseIdentifier: "Cell1")
         
         if roomName == ""{
             
@@ -181,36 +180,10 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//
-//        let myCell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! message1Cell
-//
-//
+
         let message = messageData[indexPath.row]
-//
-//        myCell.talkLabel.text = messageData[indexPath.row].body
-//
+
         if message.sender == Auth.auth().currentUser?.email{
-//
-//
-//            myCell.leftNameLabel.isHidden = true
-//            myCell.rightNameLabel.isHidden = false
-//
-//            myCell.rightNameLabel.text = messageData[indexPath.row].user
-//
-//            myCell.backView.backgroundColor = .systemTeal
-//            myCell.textLabel?.textColor = .white
-//
-//        }else{
-//
-//
-//            myCell.rightNameLabel.isHidden = true
-//            myCell.leftNameLabel.isHidden = false
-//
-//            myCell.leftNameLabel.text = messageData[indexPath.row].user
-//
-//            myCell.backView.backgroundColor = .orange
-//            myCell.textLabel?.textColor = .white
-            
 
         let myCell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MessageCell
 
@@ -239,7 +212,7 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
             return yourCell
         }
         
-//      return myCell
+
         
     }
     

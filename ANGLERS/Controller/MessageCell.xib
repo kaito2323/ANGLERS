@@ -47,7 +47,7 @@
                 <outlet property="myMessageText" destination="kDw-gu-5Et" id="FoS-k9-lIc"/>
                 <outlet property="myNameText" destination="qhP-2S-d09" id="ytl-ie-QvF"/>
             </connections>
-            <point key="canvasLocation" x="17" y="39"/>
+            <point key="canvasLocation" x="-28" y="39"/>
         </tableViewCell>
     </objects>
 </document>
