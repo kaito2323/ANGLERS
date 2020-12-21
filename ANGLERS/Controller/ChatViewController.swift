@@ -50,7 +50,7 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
             roomName = "みんなで話そうよ！"
         }
         
-        self.navigationItem.title = roomName
+        navigationItem.title = roomName
 
         loadMessages(roomName: roomName)
         //高さを調整してくれる
@@ -97,12 +97,12 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
-        
-        
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.isNavigationBarHidden = false
+//
+//
+//    }
     
     //タッチでキーボードを閉じる
        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
