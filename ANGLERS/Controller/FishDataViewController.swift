@@ -27,6 +27,8 @@ class FishDataViewController: UIViewController {
     var shareImage1:String = ""
     
     var sharePlace1:String = ""
+    
+    var commentData:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ class FishDataViewController: UIViewController {
         
         sharePlaceLabel.text = sharePlace1
         
+        commentText.text = commentData
         
     }
     

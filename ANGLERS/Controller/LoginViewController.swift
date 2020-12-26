@@ -25,9 +25,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             emailAddressTextField.delegate = self
             passWordTextField.delegate = self
             
+            navigationItem.title = "ログイン画面"
             
         }
-        
         
         //タッチでキーボードを閉じる
            override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -74,6 +74,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     self.passWordTextField.text = ""
                     
                     self.performSegue(withIdentifier: "top", sender: nil)
+                    
                     
                     
               }

@@ -96,7 +96,7 @@ class RegistarViewController: UIViewController,UITextFieldDelegate {
                 
                 //画面遷移をする
                 self.performSegue(withIdentifier: "top", sender: nil)
-                
+              
                 
                 
             }

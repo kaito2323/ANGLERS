@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72E23B122592DD0800993AFA /* TalkRoomChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E23B112592DD0800993AFA /* TalkRoomChatViewController.swift */; };
+		72E23B212594335500993AFA /* MyMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E23B1F2594335500993AFA /* MyMessageCell.swift */; };
+		72E23B222594335500993AFA /* MyMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E23B202594335500993AFA /* MyMessageCell.xib */; };
+		72E23B2A2594376500993AFA /* YourMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E23B282594376500993AFA /* YourMessageCell.swift */; };
+		72E23B2B2594376500993AFA /* YourMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E23B292594376500993AFA /* YourMessageCell.xib */; };
 		72F3546B25899B020001FB66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F3546A25899B020001FB66 /* AppDelegate.swift */; };
 		72F3546D25899B020001FB66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F3546C25899B020001FB66 /* SceneDelegate.swift */; };
 		72F3547425899B040001FB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F3547325899B040001FB66 /* Assets.xcassets */; };
@@ -28,10 +33,6 @@
 		72F354D82589A7AF0001FB66 /* MyImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F354D62589A7AF0001FB66 /* MyImageCell.xib */; };
 		72F354DB2589A8210001FB66 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F354DA2589A8210001FB66 /* ChatViewController.swift */; };
 		72F354DE2589A8740001FB66 /* TalkRoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F354DD2589A8740001FB66 /* TalkRoomListViewController.swift */; };
-		72F354E22589A8F60001FB66 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F354E02589A8F60001FB66 /* MessageCell.swift */; };
-		72F354E32589A8F60001FB66 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F354E12589A8F60001FB66 /* MessageCell.xib */; };
-		72F354E72589A9320001FB66 /* YourMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F354E52589A9320001FB66 /* YourMessageCell.swift */; };
-		72F354E82589A9320001FB66 /* YourMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F354E62589A9320001FB66 /* YourMessageCell.xib */; };
 		72F354EB2589ABF80001FB66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72F354EA2589ABF80001FB66 /* GoogleService-Info.plist */; };
 		DAFC0B7CB7A1C7136692EDC5 /* Pods_ANGLERS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875F6C88033742FDD7B33EBE /* Pods_ANGLERS.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,11 @@
 /* Begin PBXFileReference section */
 		16734EA53E760DA94F707216 /* Pods-ANGLERS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANGLERS.release.xcconfig"; path = "Target Support Files/Pods-ANGLERS/Pods-ANGLERS.release.xcconfig"; sourceTree = "<group>"; };
 		48680FC4D0E6EC484D90A8E6 /* Pods-ANGLERS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANGLERS.debug.xcconfig"; path = "Target Support Files/Pods-ANGLERS/Pods-ANGLERS.debug.xcconfig"; sourceTree = "<group>"; };
+		72E23B112592DD0800993AFA /* TalkRoomChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomChatViewController.swift; sourceTree = "<group>"; };
+		72E23B1F2594335500993AFA /* MyMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMessageCell.swift; sourceTree = "<group>"; };
+		72E23B202594335500993AFA /* MyMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyMessageCell.xib; sourceTree = "<group>"; };
+		72E23B282594376500993AFA /* YourMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMessageCell.swift; sourceTree = "<group>"; };
+		72E23B292594376500993AFA /* YourMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourMessageCell.xib; sourceTree = "<group>"; };
 		72F3546725899B020001FB66 /* ANGLERS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ANGLERS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F3546A25899B020001FB66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72F3546C25899B020001FB66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,10 +68,6 @@
 		72F354D62589A7AF0001FB66 /* MyImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyImageCell.xib; sourceTree = "<group>"; };
 		72F354DA2589A8210001FB66 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		72F354DD2589A8740001FB66 /* TalkRoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomListViewController.swift; sourceTree = "<group>"; };
-		72F354E02589A8F60001FB66 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		72F354E12589A8F60001FB66 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
-		72F354E52589A9320001FB66 /* YourMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourMessageCell.swift; sourceTree = "<group>"; };
-		72F354E62589A9320001FB66 /* YourMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourMessageCell.xib; sourceTree = "<group>"; };
 		72F354EA2589ABF80001FB66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		875F6C88033742FDD7B33EBE /* Pods_ANGLERS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ANGLERS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,10 +157,11 @@
 				72F354D62589A7AF0001FB66 /* MyImageCell.xib */,
 				72F354DA2589A8210001FB66 /* ChatViewController.swift */,
 				72F354DD2589A8740001FB66 /* TalkRoomListViewController.swift */,
-				72F354E02589A8F60001FB66 /* MessageCell.swift */,
-				72F354E12589A8F60001FB66 /* MessageCell.xib */,
-				72F354E52589A9320001FB66 /* YourMessageCell.swift */,
-				72F354E62589A9320001FB66 /* YourMessageCell.xib */,
+				72E23B112592DD0800993AFA /* TalkRoomChatViewController.swift */,
+				72E23B1F2594335500993AFA /* MyMessageCell.swift */,
+				72E23B202594335500993AFA /* MyMessageCell.xib */,
+				72E23B282594376500993AFA /* YourMessageCell.swift */,
+				72E23B292594376500993AFA /* YourMessageCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,10 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F354D82589A7AF0001FB66 /* MyImageCell.xib in Resources */,
-				72F354E32589A8F60001FB66 /* MessageCell.xib in Resources */,
-				72F354E82589A9320001FB66 /* YourMessageCell.xib in Resources */,
 				72F354D32589A73D0001FB66 /* YourImageCell.xib in Resources */,
 				72F3548525899B870001FB66 /* Main.storyboard in Resources */,
+				72E23B222594335500993AFA /* MyMessageCell.xib in Resources */,
+				72E23B2B2594376500993AFA /* YourMessageCell.xib in Resources */,
 				72F3547725899B040001FB66 /* LaunchScreen.storyboard in Resources */,
 				72F3547425899B040001FB66 /* Assets.xcassets in Resources */,
 				72F354EB2589ABF80001FB66 /* GoogleService-Info.plist in Resources */,
@@ -296,22 +299,23 @@
 			files = (
 				72F3548925899BB30001FB66 /* LoginViewController.swift in Sources */,
 				72F354AE2589A3150001FB66 /* FishPageViewController.swift in Sources */,
+				72E23B122592DD0800993AFA /* TalkRoomChatViewController.swift in Sources */,
 				72F354B92589A4FC0001FB66 /* FishLists.swift in Sources */,
 				72F3546B25899B020001FB66 /* AppDelegate.swift in Sources */,
 				72F354B62589A4B10001FB66 /* FishDataModel.swift in Sources */,
 				72F354D22589A73D0001FB66 /* YourImageCell.swift in Sources */,
+				72E23B2A2594376500993AFA /* YourMessageCell.swift in Sources */,
 				72F354BF2589A53E0001FB66 /* RoomModel.swift in Sources */,
 				72F354D72589A7AF0001FB66 /* MyImageCell.swift in Sources */,
 				72F354C42589A6840001FB66 /* FishDataViewController.swift in Sources */,
 				72F354BC2589A51A0001FB66 /* MessageData.swift in Sources */,
-				72F354E72589A9320001FB66 /* YourMessageCell.swift in Sources */,
 				72F3546D25899B020001FB66 /* SceneDelegate.swift in Sources */,
 				72F354AB2589A2F10001FB66 /* FishRegistarViewController.swift in Sources */,
 				72F354B32589A47D0001FB66 /* checkPermission.swift in Sources */,
-				72F354E22589A8F60001FB66 /* MessageCell.swift in Sources */,
 				72F354DB2589A8210001FB66 /* ChatViewController.swift in Sources */,
 				72F354DE2589A8740001FB66 /* TalkRoomListViewController.swift in Sources */,
 				72F354A02589A0760001FB66 /* RegistarViewController.swift in Sources */,
+				72E23B212594335500993AFA /* MyMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMZ9KWY5N4;
 				INFOPLIST_FILE = ANGLERS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,6 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMZ9KWY5N4;
 				INFOPLIST_FILE = ANGLERS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

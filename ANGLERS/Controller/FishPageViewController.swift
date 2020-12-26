@@ -22,6 +22,8 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     var dataSets:[FishLists] = []
     
+    var navTitle = "みんなの投稿"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +36,19 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
         tableView.register(UINib(nibName: "MyImageCell", bundle: nil), forCellReuseIdentifier: "myImageCell")
         tableView.register(UINib(nibName: "YourImageCell", bundle: nil), forCellReuseIdentifier: "yourImageCell")
         
+        
        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.isNavigationBarHidden = false
+    
+        self.parent?.navigationItem.title = navTitle
+        
         loadData()
         
-    
         
     }
     
@@ -69,15 +75,13 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
                     
                     let data = doc.data()
                     if let fishName = data["fishName"] as? String,let fishImage = data["fishImage"]as? String,let fishPlace = data["fishPlace"]as? String,
-                       let docID = data["docID"]as? String,let userName = data["userName"]as? String {
+                       let docID = data["docID"]as? String,let userName = data["userName"]as? String,let comment = data["comment"]as? String {
                         
-                        //FishListsの物をfishsに入れる.doc.documentIDとすることでIDがふれる
-                        let fishs = FishLists(fishName: fishName, fishImage: fishImage, fishPlace: fishPlace, docID: docID, userName: userName)
+                    
+                        let fishs = FishLists(fishName: fishName, fishImage: fishImage, fishPlace: fishPlace, docID: docID, userName: userName, comment: comment)
                     
                         self.dataSets.append(fishs)
-//                        print("ここだよ")
-//                        print(self.dataSets.debugDescription)
-                        
+                 
                         
                     }
                   
@@ -157,6 +161,8 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
             fishDataVC.shareImage1 = dataSets[indexPath.row].fishImage
             
             fishDataVC.sharePlace1 = dataSets[indexPath.row].fishPlace
+            
+            fishDataVC.commentData = dataSets[indexPath.row].comment
             
             navigationController?.pushViewController(fishDataVC, animated: true)
             

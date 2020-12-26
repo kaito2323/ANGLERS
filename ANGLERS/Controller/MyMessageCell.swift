@@ -1,5 +1,5 @@
 //
-//  YourMessageCell.swift
+//  MyMessageCell.swift
 //  ANGLERS
 //
 //  Created by kaito12 on 2020/12/24.
@@ -7,33 +7,30 @@
 
 import UIKit
 
-class YourMessageCell: UITableViewCell {
+class MyMessageCell: UITableViewCell {
     
-    var yourMessage: String?{
+    var messageText: String?{
         didSet{
-            let width = estimateFrameForTextView(text: yourMessage!).width + 20
+            let width = estimateFrameForTextView(text: messageText!).width + 20
             
-            yourMessageTextViewWidthConstraint.constant = width
-            yourMessageText.text = yourMessage
+            messageTextViewWidthConstraint.constant = width
+            myMessageText.text = messageText
         }
         
     }
     
     
-   
-    @IBOutlet weak var yourMessageTextViewWidthConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var messageTextViewWidthConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var yourNameLabel: UILabel!
+    @IBOutlet weak var myNameLabel: UILabel!
     
-    @IBOutlet weak var yourMessageText: UITextView!
-    
-    
+    @IBOutlet weak var myMessageText: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        yourMessageText.layer.cornerRadius = 15
+   
+        myMessageText.layer.cornerRadius = 15
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,12 +39,10 @@ class YourMessageCell: UITableViewCell {
         
         self.backgroundColor = UIColor.clear
         
-        self.yourMessageText.layer.cornerRadius = 10
-        self.yourMessageText.clipsToBounds = true
-        
+        self.myMessageText.layer.cornerRadius = 10
+        self.myMessageText.clipsToBounds = true
+     
     }
-    
-    
     func estimateFrameForTextView(text: String) -> CGRect{
         
         let size = CGSize(width: 200, height: 1000)
@@ -55,4 +50,8 @@ class YourMessageCell: UITableViewCell {
         
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], context: nil)
     }
+    
+    
+    
+    
 }

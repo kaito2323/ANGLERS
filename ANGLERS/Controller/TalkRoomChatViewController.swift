@@ -1,8 +1,8 @@
 //
-//  ChatViewController.swift
+//  TalkRoomChatViewController.swift
 //  ANGLERS
 //
-//  Created by kaito12 on 2020/12/16.
+//  Created by kaito12 on 2020/12/23.
 //
 
 import UIKit
@@ -10,10 +10,8 @@ import Firebase
 import FirebaseFirestore
 import SDWebImage
 
-class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate {
+class TalkRoomChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
-    //スクリーンのサイズを取得
-//    let screenSize = UIScreen.main.bounds.size
     
     let dashBord = Firestore.firestore()
     
@@ -33,36 +31,28 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
     @IBOutlet weak var sendButton: UIButton!
     
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         sendButton.isEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
         messageTextField.delegate = self
         
+        tableView.register(UINib(nibName: "MyMessageCell", bundle: nil), forCellReuseIdentifier: "MyCell")
         
         tableView.register(UINib(nibName: "YourMessageCell", bundle: nil), forCellReuseIdentifier: "YourCell")
-        
 
-        tableView.register(UINib(nibName: "MyMessageCell", bundle: nil), forCellReuseIdentifier: "MyCell")
-
- 
-        if roomName == ""{
-            
-            roomName = "みんなで話そうよ！"
-            
-            
-        }
-        
     
-        self.parent?.navigationItem.title = roomName
+        navigationItem.title = roomName
 
+        
         loadMessages(roomName: roomName)
         //高さを調整してくれる
         
+        tableView.estimatedRowHeight = 60
         //cellをタップできなくする
         tableView.allowsSelection = false
         
@@ -114,8 +104,6 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
     //タッチでキーボードを閉じる
        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
            view.endEditing(true)
-        
-        
        }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -128,19 +116,14 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
             
             sendButton.isEnabled = true
         }
-        
-    }
        
+    }
        //リターンキーを押した時にキーボードを閉じる
        
        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            
            //キーボードが閉じる
            textField.resignFirstResponder()
-        
-       
-        
-        
            
            return true
        }
@@ -211,9 +194,6 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
 
         if message.sender == Auth.auth().currentUser?.email{
 
-
-
-            
             let myCell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MyMessageCell
 
             myCell.myNameLabel.text = messageData[indexPath.row].user
@@ -223,9 +203,6 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
             myCell.layer.cornerRadius = 15
 
             return myCell
-
-
-
             
 
         }else{
@@ -238,8 +215,7 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
             yourCell.layer.cornerRadius = 15
 
             return yourCell
-
-          
+            
 
             
         }
@@ -252,22 +228,22 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
     }
     
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        tableView.estimatedRowHeight = 20
-        return UITableView.automaticDimension
-        
-        
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        return 100
+//
+//
+//    }
 
     @IBAction func send(_ sender: Any) {
         
+        
         //送信
         
-        
-        if let messageText = messageTextField.text,let sender = Auth.auth().currentUser?.email{
-        
+    
             
+        if let messageText = messageTextField.text,let sender = Auth.auth().currentUser?.email{
+
             dashBord.collection(roomName).addDocument(data: ["sender":sender,"body":messageText,"user":Auth.auth().currentUser?.displayName as Any,"date":Date().timeIntervalSince1970]) { [self] (error) in
 
                 
@@ -283,6 +259,7 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
                 DispatchQueue.main.async {
                     
                 self.messageTextField.text = ""
+                
                     self.sendButton.isEnabled = false
                 self.messageTextField.resignFirstResponder()
                 
@@ -291,6 +268,8 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
                 
                 self.tableView.reloadData()
 
+                
+                
             }
             
         }
@@ -299,4 +278,5 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     
 }
+
 

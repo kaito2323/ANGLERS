@@ -20,6 +20,8 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     
     @IBOutlet weak var fishNameTextField: UITextField!
     
+    @IBOutlet weak var commentTextField: UITextField!
+    
     
     @IBOutlet weak var fishSelectImageView: UIImageView!
     
@@ -98,12 +100,20 @@ if fishNameTextField.text?.isEmpty != true ,let image = fishSelectImageView.imag
             //jpegData型にして
             let data = image.jpegData(compressionQuality: 0.1)
             
-            fishDataModel.fishImageData(data1: data!, nameData: fishNameTextField.text!,fishPlace: fishPlace.text!,email: (Auth.auth().currentUser?.email)!,userName: (Auth.auth().currentUser?.displayName)!)
-                
+
+    
+    fishDataModel.fishImageData(data1: data!, nameData: fishNameTextField.text!,fishPlace: fishPlace.text!,email: (Auth.auth().currentUser?.email)!,userName: (Auth.auth().currentUser?.displayName)!, comment: commentTextField.text!)
+              
                 
             }
         //FishListViewControllerに移動する
         performSegue(withIdentifier: "FishList", sender: nil)
+        
+        fishPlace.text = ""
+        fishNameTextField.text = ""
+        commentTextField.text = ""
+        fishSelectImageView.image = UIImage(named: "fishimage")
+        
         }
 
    

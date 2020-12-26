@@ -14,14 +14,25 @@ class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableV
     
     var roomNameArray = ["好きな釣りポイント","釣り初心者","おすすめポイント","釣った魚を自慢しよう"]
     var roomImageArray = ["1","2","3","4"]
+    var navTitle = "トークルーム"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         listTableView.delegate = self
         listTableView.dataSource = self
+        
+        
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+
+        self.parent?.navigationItem.title = navTitle
+
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return roomNameArray.count
@@ -50,14 +61,14 @@ class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegue(withIdentifier: "chatVC", sender: indexPath.row)
+        performSegue(withIdentifier: "talkChatVC", sender: indexPath.row)
         
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let chatVC = segue.destination as! ChatViewController
-        chatVC.roomName = roomNameArray[sender as! Int]
+        let talkChatVC = segue.destination as! TalkRoomChatViewController
+        talkChatVC.roomName = roomNameArray[sender as! Int]
     }
 
 }
