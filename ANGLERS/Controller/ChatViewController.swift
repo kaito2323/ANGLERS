@@ -12,8 +12,8 @@ import SDWebImage
 
 class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate {
 
-    //スクリーンのサイズを取得
-//    let screenSize = UIScreen.main.bounds.size
+//    スクリーンのサイズを取得
+    let screenSize = UIScreen.main.bounds.size
     
     let dashBord = Firestore.firestore()
     
@@ -23,6 +23,8 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
     var messageData:[MessageData] = []
     
     var user = Auth.auth().currentUser?.displayName
+    
+    
     
     
     @IBOutlet weak var messageTextField: UITextField!
@@ -50,13 +52,7 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
         tableView.register(UINib(nibName: "MyMessageCell", bundle: nil), forCellReuseIdentifier: "MyCell")
 
  
-        if roomName == ""{
-            
-            roomName = "みんなで話そうよ！"
-            
-            
-        }
-        
+        roomName = "みんなで話そうよ！"
     
         self.parent?.navigationItem.title = roomName
 
@@ -67,39 +63,11 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
         tableView.allowsSelection = false
         
         
-        
-//        //キーボードの設定
-//        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
 //
 //        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
 //
-//
-//
-//    }
-//
-//       @objc func keyboardWillShow(_ notification:Notification){
-//
-//        let keyboardHeight = ((notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as Any) as AnyObject).cgRectValue.height
-//
-//        messageTextField.frame.origin.y = screenSize.height - keyboardHeight - messageTextField.frame.height
-//
-//       }
-//
-//
-//    @objc func keyboardWillHide(_ notification:Notification){
-//
-//
-//        messageTextField.frame.origin.y = screenSize.height - messageTextField.frame.height
-//
-//        guard let rect = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-//              let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else{return}
-//
-//        UIView.animate(withDuration: duration) {
-//            let transform = CGAffineTransform(translationX: 0, y: 0)
-//
-//            self.view.transform = transform
-//        }
-//
+
         
     }
     
@@ -108,8 +76,39 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
 
+        loadMessages(roomName: roomName)
 
     }
+    
+    
+//    @objc func keyboardWillShow(_ notification:NSNotification){
+//
+//        let keyboardHeight = ((notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as Any) as AnyObject).cgRectValue.height
+//
+//        messageTextField.frame.origin.y = screenSize.height - keyboardHeight - messageTextField.frame.height
+//                  sendButton.frame.origin.y = screenSize.height - keyboardHeight - sendButton.frame.height
+//
+//
+//     }
+//
+//     @objc func keyboardWillHide(_ notification:NSNotification){
+//
+//        messageTextField.frame.origin.y = screenSize.height - messageTextField.frame.height
+//
+//                  sendButton.frame.origin.y = screenSize.height - sendButton.frame.height
+//
+//              
+//               guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else{return}
+//
+//
+//                  UIView.animate(withDuration: duration) {
+//
+//                      let transform = CGAffineTransform(translationX: 0, y: 0)
+//                      self.view.transform = transform
+//
+//                  }
+//
+//         }
     
     //タッチでキーボードを閉じる
        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -154,6 +153,14 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
             self.messageData = []
             
             if error != nil{
+//          エラー処理
+//
+//
+//                    let alert = UIAlertController(title: "ネットワークエラー", message: "ネットワークに繋がっておりません", preferredStyle: .alert)
+//                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                    self.present(alert, animated: true, completion: nil)
+//
+//
                 
                 print(error.debugDescription)
                 return
