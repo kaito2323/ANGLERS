@@ -18,15 +18,10 @@
 * pod 'Alamofire', '~> 5.2'
  
  
-# Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+# 機能一覧
+* 新規登録、ログイン機能(Firebase)
+* チャット機能
+* ストレージサーバーに保存
  
 # Author
  
