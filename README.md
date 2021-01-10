@@ -9,8 +9,7 @@
  
 "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
  
-# Requirement
- 
+# 使用技術
  
 * pod 'Firebase/Auth'
 * pod 'Firebase/Firestore'
