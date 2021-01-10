@@ -14,9 +14,6 @@
 * pod 'Firebase/Firestore'
 * pod 'Firebase/Storage'
 * pod 'SDWebImage', '~> 5.0'
-* pod 'SwiftyJSON', '~> 4.0'
-* pod 'Alamofire', '~> 5.2'
- 
  
 # 機能一覧
 * 新規登録、ログイン機能(Firebase)
