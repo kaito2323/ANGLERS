@@ -58,38 +58,7 @@ class TalkRoomChatViewController: UIViewController, UITableViewDelegate, UITable
         
         
         
-//        //キーボードの設定
-//        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
-//
-//
-//
-//    }
-//
-//       @objc func keyboardWillShow(_ notification:Notification){
-//
-//        let keyboardHeight = ((notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as Any) as AnyObject).cgRectValue.height
-//
-//        messageTextField.frame.origin.y = screenSize.height - keyboardHeight - messageTextField.frame.height
-//
-//       }
-//
-//
-//    @objc func keyboardWillHide(_ notification:Notification){
-//
-//
-//        messageTextField.frame.origin.y = screenSize.height - messageTextField.frame.height
-//
-//        guard let rect = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-//              let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else{return}
-//
-//        UIView.animate(withDuration: duration) {
-//            let transform = CGAffineTransform(translationX: 0, y: 0)
-//
-//            self.view.transform = transform
-//        }
-//
+
         
     }
     
@@ -228,12 +197,6 @@ class TalkRoomChatViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        return 100
-//
-//
-//    }
 
     @IBAction func send(_ sender: Any) {
         

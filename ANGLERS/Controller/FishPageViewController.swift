@@ -17,7 +17,7 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    //ダッシュボードにアクセスできるようにインスタンス化
+    
     var dashBord1 = Firestore.firestore()
     
     var dataSets:[FishLists] = []
