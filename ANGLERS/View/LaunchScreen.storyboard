@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,56 +12,28 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainFish" translatesAutoresizingMaskIntoConstraints="NO" id="YIo-1N-m9Q">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="YIo-1N-m9Q" secondAttribute="height" multiplier="207:448" id="zpw-ce-3Le"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="釣人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-qX-yuO">
-                                <rect key="frame" x="207" y="478" width="187" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="Gl5-3Z-wH9"/>
-                                    <constraint firstAttribute="width" constant="187" id="U96-Yw-GL8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="つりんちゅ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6P-0q-6fA">
-                                <rect key="frame" x="189" y="553" width="187" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="PAJ-CX-9ql"/>
-                                    <constraint firstAttribute="width" constant="187" id="xaV-tO-F7T"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="0.04177544633" green="0.89385384879999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="n8A-qX-yuO" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="434" id="0jW-lZ-G3e"/>
-                            <constraint firstItem="F6P-0q-6fA" firstAttribute="top" secondItem="n8A-qX-yuO" secondAttribute="bottom" constant="8" symbolic="YES" id="6Nb-Tb-54R"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="F6P-0q-6fA" secondAttribute="trailing" constant="38" id="Acx-dJ-yF9"/>
-                            <constraint firstItem="n8A-qX-yuO" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="207" id="DQg-vI-LcV"/>
-                            <constraint firstAttribute="bottom" secondItem="YIo-1N-m9Q" secondAttribute="bottom" id="JmW-ea-Lor"/>
-                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aVW-Vn-bAT"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="n8A-qX-yuO" secondAttribute="trailing" constant="20" id="aat-Wn-Jun"/>
-                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="fxD-ar-qqt"/>
-                            <constraint firstItem="F6P-0q-6fA" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="189" id="iDq-4R-TPx"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="F6P-0q-6fA" secondAttribute="bottom" constant="278" id="uAt-Zk-9DC"/>
-                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="ymb-k2-5Ev"/>
+                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AQB-eJ-1gP"/>
+                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="abE-w2-MbG"/>
+                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="eyf-Ka-cKo"/>
+                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="fgl-MD-SF9"/>
+                            <constraint firstAttribute="bottom" secondItem="YIo-1N-m9Q" secondAttribute="bottom" id="iAI-l2-K5f"/>
+                            <constraint firstItem="YIo-1N-m9Q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xks-I0-0mT"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="50.769230769230766" y="374.64454976303318"/>
         </scene>
     </scenes>
     <resources>

@@ -20,7 +20,7 @@ class YourMessageCell: UITableViewCell {
     }
     
     
-   
+    
     @IBOutlet weak var yourMessageTextViewWidthConstraint: NSLayoutConstraint!
     
     
@@ -35,10 +35,10 @@ class YourMessageCell: UITableViewCell {
         
         yourMessageText.layer.cornerRadius = 15
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         
         self.backgroundColor = UIColor.clear
         

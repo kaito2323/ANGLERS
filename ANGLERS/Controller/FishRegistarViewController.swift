@@ -14,7 +14,7 @@ import FirebaseFirestore
 
 
 class FishRegistarViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
-
+    
     @IBOutlet weak var fishPlace: UITextField!
     
     
@@ -25,7 +25,7 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     
     @IBOutlet weak var fishSelectImageView: UIImageView!
     
-
+    
     
     var fishDataModel = FishDataModel()
     
@@ -33,12 +33,12 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     
     var userID = String()
     
- 
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         fishNameTextField.delegate = self
         
         let checkPermission = CheckPermission()
@@ -57,26 +57,26 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     
     
     //タッチでキーボードを閉じる
-       override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           view.endEditing(true)
-       }
-       
-       
-       //リターンキーを押した時にキーボードを閉じる
-       
-       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           
-           //キーボードが閉じる
-           textField.resignFirstResponder()
-           
-           return true
-       }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    
+    //リターンキーを押した時にキーボードを閉じる
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //キーボードが閉じる
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
     
     @IBAction func logOut(_ sender: Any) {
         
         let firebaseAuth = Auth.auth()
-
+        
         
         do {
             try firebaseAuth.signOut()
@@ -91,21 +91,21 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     
     
     //釣果登録を押すと
-
+    
     
     @IBAction func fishRegistar(_ sender: Any) {
-    
-    
-if fishNameTextField.text?.isEmpty != true ,let image = fishSelectImageView.image{
+        
+        
+        if fishNameTextField.text?.isEmpty != true ,let image = fishSelectImageView.image{
             //jpegData型にして
             let data = image.jpegData(compressionQuality: 0.1)
             
-
-    
-    fishDataModel.fishImageData(data1: data!, nameData: fishNameTextField.text!,fishPlace: fishPlace.text!,email: (Auth.auth().currentUser?.email)!,userName: (Auth.auth().currentUser?.displayName)!, comment: commentTextField.text!)
-              
-                
-            }
+            
+            
+            fishDataModel.fishImageData(data1: data!, nameData: fishNameTextField.text!,fishPlace: fishPlace.text!,email: (Auth.auth().currentUser?.email)!,userName: (Auth.auth().currentUser?.displayName)!, comment: commentTextField.text!)
+            
+            
+        }
         //FishListViewControllerに移動する
         performSegue(withIdentifier: "FishList", sender: nil)
         
@@ -114,18 +114,18 @@ if fishNameTextField.text?.isEmpty != true ,let image = fishSelectImageView.imag
         commentTextField.text = ""
         fishSelectImageView.image = UIImage(named: "fishimage")
         
-        }
-
-   
+    }
+    
+    
     @IBAction func next(_ sender: Any) {
         
         performSegue(withIdentifier: "FishList", sender: nil)
     }
     
     
-
     
- 
+    
+    
     @IBAction func cameraAction(_ sender: Any) {
         
         showAlert()

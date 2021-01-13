@@ -8,7 +8,7 @@
 import UIKit
 
 class YourImageCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var yourImageView: UIImageView!
     
@@ -20,10 +20,10 @@ class YourImageCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

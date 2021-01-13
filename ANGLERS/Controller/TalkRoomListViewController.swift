@@ -8,17 +8,16 @@
 import UIKit
 
 class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-
+    
     
     @IBOutlet weak var listTableView: UITableView!
     
     var roomNameArray = ["好きな釣りポイント","釣り初心者","おすすめポイント","釣った魚を自慢しよう"]
     var roomImageArray = ["1","2","3","4"]
-    var navTitle = "トークルーム"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         listTableView.delegate = self
         listTableView.dataSource = self
         
@@ -29,11 +28,12 @@ class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
-
-        self.parent?.navigationItem.title = navTitle
-
+        
+        self.navigationItem.hidesBackButton = true
+        self.parent?.navigationItem.title = "トークルーム"
+        
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return roomNameArray.count
     }
@@ -43,7 +43,7 @@ class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath)
         
         cell.imageView?.image = UIImage(named: roomImageArray[indexPath.row])
@@ -52,7 +52,7 @@ class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableV
         
         return cell
     }
-        
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 75
@@ -70,6 +70,6 @@ class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableV
         let talkChatVC = segue.destination as! TalkRoomChatViewController
         talkChatVC.roomName = roomNameArray[sender as! Int]
     }
-
+    
 }
 

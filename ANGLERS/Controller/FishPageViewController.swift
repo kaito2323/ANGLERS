@@ -12,7 +12,7 @@ import FirebaseFirestore
 
 
 class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,8 +21,6 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var dashBord1 = Firestore.firestore()
     
     var dataSets:[FishLists] = []
-    
-    var navTitle = "みんなの投稿"
     
     
     override func viewDidLoad() {
@@ -37,15 +35,17 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
         tableView.register(UINib(nibName: "YourImageCell", bundle: nil), forCellReuseIdentifier: "yourImageCell")
         
         
-       
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.isNavigationBarHidden = false
-    
-        self.parent?.navigationItem.title = navTitle
+        
+        self.parent?.navigationItem.title = "みんなの投稿"
+        
+        
         
         loadData()
         
@@ -77,16 +77,16 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
                     if let fishName = data["fishName"] as? String,let fishImage = data["fishImage"]as? String,let fishPlace = data["fishPlace"]as? String,
                        let docID = data["docID"]as? String,let userName = data["userName"]as? String,let comment = data["comment"]as? String {
                         
-                    
+                        
                         let fishs = FishLists(fishName: fishName, fishImage: fishImage, fishPlace: fishPlace, docID: docID, userName: userName, comment: comment)
-                    
+                        
                         self.dataSets.append(fishs)
-                 
+                        
                         
                     }
-                  
+                    
                     self.tableView.reloadData()
-                   
+                    
                 }
                 
             }
@@ -113,63 +113,63 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       
+        
         
         let doc = dataSets[indexPath.row]
-       
+        
         //username入れて確かめるところ
         
         if doc.docID == Auth.auth().currentUser?.email{
-
-    
+            
+            
             let myCell = tableView.dequeueReusableCell(withIdentifier: "myImageCell", for: indexPath) as! MyImageCell
-
+            
             myCell.myImageLabel.text = dataSets[indexPath.row].fishName
-        
+            
             myCell.myImageView.sd_setImage(with: URL(string: dataSets[indexPath.row].fishImage), completed: nil)
-               
+            
             myCell.myName.text = dataSets[indexPath.row].userName
-        
+            
             
             return myCell
-        
+            
         }else{
-
-
+            
+            
             let yourCell = tableView.dequeueReusableCell(withIdentifier: "yourImageCell", for: indexPath) as! YourImageCell
-
+            
             yourCell.yourImageLabel.text = dataSets[indexPath.row].fishName
-        
+            
             yourCell.yourImageView.sd_setImage(with: URL(string: dataSets[indexPath.row].fishImage), completed: nil)
-               
+            
             yourCell.yourName.text = dataSets[indexPath.row].userName
             
             
             return yourCell
         }
-    
+        
         
     }
     
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-            let fishDataVC = (storyboard?.instantiateViewController(identifier: "FishData"))! as FishDataViewController
-            
-            
-            fishDataVC.shareName1 = dataSets[indexPath.row].fishName
-            
-            fishDataVC.shareImage1 = dataSets[indexPath.row].fishImage
-            
-            fishDataVC.sharePlace1 = dataSets[indexPath.row].fishPlace
-            
-            fishDataVC.commentData = dataSets[indexPath.row].comment
-            
-            navigationController?.pushViewController(fishDataVC, animated: true)
-            
-            
-            
-            
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let fishDataVC = (storyboard?.instantiateViewController(identifier: "FishData"))! as FishDataViewController
+        
+        
+        fishDataVC.shareName1 = dataSets[indexPath.row].fishName
+        
+        fishDataVC.shareImage1 = dataSets[indexPath.row].fishImage
+        
+        fishDataVC.sharePlace1 = dataSets[indexPath.row].fishPlace
+        
+        fishDataVC.commentData = dataSets[indexPath.row].comment
+        
+        navigationController?.pushViewController(fishDataVC, animated: true)
+        
+        
+        
+        
+    }
     
     
     
@@ -180,10 +180,10 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
         return 100
         
         
-   
+        
     }
     
     
-
+    
 }
 

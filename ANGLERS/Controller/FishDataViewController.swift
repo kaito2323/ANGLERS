@@ -10,11 +10,11 @@ import SDWebImage
 
 
 class FishDataViewController: UIViewController {
-
+    
     
     @IBOutlet weak var fishDataName: UILabel!
     
-  
+    
     @IBOutlet weak var fishDataImage: UIImageView!
     
     
@@ -29,10 +29,10 @@ class FishDataViewController: UIViewController {
     var sharePlace1:String = ""
     
     var commentData:String = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         fishDataName.text = shareName1
         
         fishDataImage.sd_setImage(with: URL(string: shareImage1), completed: nil)
@@ -65,7 +65,7 @@ class FishDataViewController: UIViewController {
     }
     
     
-
- 
+    
+    
 }
 

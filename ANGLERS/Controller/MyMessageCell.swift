@@ -29,19 +29,19 @@ class MyMessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-   
+        
         myMessageText.layer.cornerRadius = 15
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         
         self.backgroundColor = UIColor.clear
         
         self.myMessageText.layer.cornerRadius = 10
         self.myMessageText.clipsToBounds = true
-     
+        
     }
     func estimateFrameForTextView(text: String) -> CGRect{
         
