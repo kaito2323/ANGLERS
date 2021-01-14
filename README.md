@@ -7,7 +7,10 @@
 # DEMO
 
  新規登録、ログイン、ログアウト
+ 
 ![kekka](https://user-images.githubusercontent.com/65961408/104604129-7b766b80-56c0-11eb-948a-f750df885ada.gif)
+
+チャット機能
  
 # 使用技術
  
