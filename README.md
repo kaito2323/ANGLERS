@@ -13,7 +13,7 @@
 
 
 * 写真共有
-
+![share](https://user-images.githubusercontent.com/65961408/104731733-7b897080-577f-11eb-9fb6-4efa1e24df93.gif)
 
 * チャット機能
 
