@@ -29,6 +29,6 @@
 # 機能一覧
 * 新規登録、ログイン機能(FirebaseAuth)
 * チャット機能(FirebaseStore)
-* 写真投稿機能(FirebaseStorage,FireBaseStore)
+* 写真投稿機能(FirebaseStorage,FireBaseStore, SDWebImage)
 
  
