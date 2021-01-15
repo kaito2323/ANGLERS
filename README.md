@@ -8,11 +8,12 @@
 
 * 新規登録、ログイン、ログアウト
  
-![kekka](https://user-images.githubusercontent.com/65961408/104604129-7b766b80-56c0-11eb-948a-f750df885ada.gif)
+![registar](https://user-images.githubusercontent.com/65961408/104734490-b2fa1c00-5783-11eb-9784-e56b858dc934.gif)
 ![login](https://user-images.githubusercontent.com/65961408/104663189-cf5c7100-570f-11eb-88d2-ac9b4bce6652.gif)
 
 
 * 写真共有
+
 ![share](https://user-images.githubusercontent.com/65961408/104731733-7b897080-577f-11eb-9fb6-4efa1e24df93.gif)
 
 * チャット機能
