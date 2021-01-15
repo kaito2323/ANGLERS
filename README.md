@@ -6,17 +6,17 @@
  
 # DEMO
 
-* 新規登録、ログイン、ログアウト
+##### 新規登録、ログイン、ログアウト
  
 ![registar](https://user-images.githubusercontent.com/65961408/104734490-b2fa1c00-5783-11eb-9784-e56b858dc934.gif)
 ![login](https://user-images.githubusercontent.com/65961408/104663189-cf5c7100-570f-11eb-88d2-ac9b4bce6652.gif)
 
 
-* 写真共有
+##### 写真共有
 
 ![share](https://user-images.githubusercontent.com/65961408/104731733-7b897080-577f-11eb-9fb6-4efa1e24df93.gif)
 
-* チャット機能
+##### チャット機能
 
 ![chat](https://user-images.githubusercontent.com/65961408/104737449-98c23d00-5787-11eb-88f6-9022ea58b20e.gif)
 
