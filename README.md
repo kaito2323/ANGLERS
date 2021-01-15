@@ -18,6 +18,8 @@
 
 * チャット機能
 
+![chat](https://user-images.githubusercontent.com/65961408/104737449-98c23d00-5787-11eb-88f6-9022ea58b20e.gif)
+
 
  
 # 使用技術
