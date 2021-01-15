@@ -18,8 +18,7 @@
 
 ##### チャット機能
 
-![chat](https://user-images.githubusercontent.com/65961408/104737449-98c23d00-5787-11eb-88f6-9022ea58b20e.gif)
-
+![chat](https://user-images.githubusercontent.com/65961408/104741335-6961ff00-578c-11eb-936e-ab20ae203fed.gif)
 
  
 # 使用技術
