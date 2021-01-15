@@ -6,12 +6,18 @@
  
 # DEMO
 
- 新規登録、ログイン、ログアウト
+新規登録、ログイン、ログアウト
  
 ![kekka](https://user-images.githubusercontent.com/65961408/104604129-7b766b80-56c0-11eb-948a-f750df885ada.gif)
 ![login](https://user-images.githubusercontent.com/65961408/104663189-cf5c7100-570f-11eb-88d2-ac9b4bce6652.gif)
 
+
+写真共有
+
+
 チャット機能
+
+
  
 # 使用技術
  
@@ -26,12 +32,3 @@
 * 写真投稿機能(FirebaseStorage,FireBaseStore)
 
  
- 
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
