@@ -14,7 +14,7 @@
 
 ##### 写真共有
 
-![share](https://user-images.githubusercontent.com/65961408/104731733-7b897080-577f-11eb-9fb6-4efa1e24df93.gif)
+![share](https://user-images.githubusercontent.com/65961408/104789407-5412c200-57d8-11eb-99ef-17292c6b6b8c.gif)
 
 ##### チャット機能
 
