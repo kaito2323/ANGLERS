@@ -314,6 +314,7 @@
                                             <constraint firstAttribute="height" constant="34" id="8rc-ct-GtH"/>
                                             <constraint firstAttribute="width" constant="284" id="WJU-6u-77i"/>
                                         </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -342,7 +343,7 @@
             </objects>
             <point key="canvasLocation" x="4348" y="1152"/>
         </scene>
-        <!--SNS投稿-->
+        <!--写真投稿-->
         <scene sceneID="ZFP-8G-zhQ">
             <objects>
                 <viewController id="xVk-Ew-pNK" customClass="FishRegistarViewController" customModule="ANGLERS" customModuleProvider="target" sceneMemberID="viewController">
@@ -358,7 +359,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="みんなにシェア">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="fishRegistar:" destination="xVk-Ew-pNK" eventType="touchUpInside" id="mUG-33-QGc"/>
@@ -381,7 +382,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="ログアウト">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="logOut:" destination="xVk-Ew-pNK" eventType="touchUpInside" id="X1X-p6-LLT"/>
@@ -427,7 +428,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="みんなの投稿">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="xVk-Ew-pNK" eventType="touchUpInside" id="R3l-91-KL5"/>
@@ -471,7 +472,7 @@
                             <constraint firstItem="ReM-ax-znI" firstAttribute="top" secondItem="Vgv-S7-Vku" secondAttribute="bottom" constant="72" id="wxf-Kt-fBQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SNS投稿" id="GY1-fG-oC6"/>
+                    <tabBarItem key="tabBarItem" title="写真投稿" id="GY1-fG-oC6"/>
                     <connections>
                         <outlet property="commentTextField" destination="LZe-zE-x6f" id="aRb-4G-dAW"/>
                         <outlet property="fishNameTextField" destination="ReM-ax-znI" id="6cV-ex-UVN"/>
@@ -542,7 +543,6 @@
                                     <constraint firstAttribute="height" constant="37" id="UCb-HS-srH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="魚の名前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unT-O9-agb">
@@ -552,7 +552,6 @@
                                     <constraint firstAttribute="height" constant="48" id="adm-2T-lkm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VXe-5G-0pZ">
@@ -581,7 +580,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="シェアボタン">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="shareButton:" destination="gwa-Bx-5x9" eventType="touchUpInside" id="Urk-uE-xjc"/>
@@ -594,7 +593,6 @@
                                     <constraint firstAttribute="width" constant="240" id="hKa-la-HZP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一言コメント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsp-V1-Ypu">
@@ -604,7 +602,6 @@
                                     <constraint firstAttribute="height" constant="21" id="vmX-vU-sZP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrR-Rm-jTc">
@@ -709,6 +706,7 @@
                                     <constraint firstAttribute="height" constant="34" id="WpP-dB-7XL"/>
                                     <constraint firstAttribute="width" constant="284" id="YSH-pO-PDb"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

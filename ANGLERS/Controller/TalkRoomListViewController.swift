@@ -12,7 +12,7 @@ class TalkRoomListViewController: UIViewController,UITableViewDelegate, UITableV
     
     @IBOutlet weak var listTableView: UITableView!
     
-    var roomNameArray = ["好きな釣りポイント","釣り初心者","おすすめポイント","釣った魚を自慢しよう"]
+    var roomNameArray = ["好きな釣りポイント","釣り初心者","おすすめグッズ","釣った魚を自慢しよう"]
     var roomImageArray = ["1","2","3","4"]
     
     override func viewDidLoad() {

@@ -54,8 +54,6 @@ class RegistarViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func registar(_ sender: Any) {
         
-        //mailAddressが空でないのとpassWord空でないかを確認
-        
         
         Auth.auth().createUser(withEmail: mailAddress.text!, password: passWord.text!) { [self] (result, error) in
             

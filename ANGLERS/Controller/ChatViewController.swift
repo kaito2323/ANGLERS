@@ -12,12 +12,10 @@ import SDWebImage
 
 class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate {
     
-    //    スクリーンのサイズを取得
-    let screenSize = UIScreen.main.bounds.size
-    
     let dashBord = Firestore.firestore()
     
     var roomName = String()
+    
     var imageString = String()
     
     var messageData:[MessageData] = []
@@ -55,10 +53,9 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
         roomName = "みんなで話そうよ！"
         
         self.parent?.navigationItem.title = roomName
+     
         
         loadMessages(roomName: roomName)
-        //高さを調整してくれる
-        
         //cellをタップできなくする
         tableView.allowsSelection = false
         
@@ -71,6 +68,8 @@ class ChatViewController: UIViewController,UITableViewDataSource, UITableViewDel
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
         
+        
+        roomName = "みんなで話そうよ！"
         loadMessages(roomName: roomName)
         
     }

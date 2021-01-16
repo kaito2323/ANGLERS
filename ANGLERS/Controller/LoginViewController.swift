@@ -29,6 +29,12 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.parent?.navigationItem.hidesBackButton = true
+    }
+    
     //タッチでキーボードを閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)

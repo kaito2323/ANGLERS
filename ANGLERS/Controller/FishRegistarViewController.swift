@@ -50,7 +50,11 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+
+        self.parent?.navigationItem.title = "写真を投稿しよう！"
+        
+        self.parent?.navigationItem.hidesBackButton = true
+
         
         
     }
@@ -81,8 +85,9 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
         do {
             try firebaseAuth.signOut()
             
-            self.navigationController?.popViewController(animated: true)
-            
+            let loginVC = self.storyboard?.instantiateViewController(identifier: "loginVC") as! LoginViewController
+            self.navigationController?.pushViewController(loginVC, animated: true)
+
         } catch let error as NSError {
             print(error.localizedDescription)
         }
@@ -91,13 +96,11 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     
     
     //釣果登録を押すと
-    
-    
     @IBAction func fishRegistar(_ sender: Any) {
         
         
         if fishNameTextField.text?.isEmpty != true ,let image = fishSelectImageView.image{
-            //jpegData型にして
+            
             let data = image.jpegData(compressionQuality: 0.1)
             
             
@@ -132,7 +135,6 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     }
     
     //カメラ立ち上げメソッド
-    
     func camera(){
         
         let sourceType:UIImagePickerController.SourceType = .camera
