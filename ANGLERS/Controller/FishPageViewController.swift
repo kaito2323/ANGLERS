@@ -117,7 +117,7 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         let doc = dataSets[indexPath.row]
         
-        //username入れて確かめるところ
+       
         
         if doc.docID == Auth.auth().currentUser?.email{
             
