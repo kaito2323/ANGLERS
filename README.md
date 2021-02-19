@@ -15,7 +15,7 @@
 ##### 写真共有、写真データ
 
 ![share](https://user-images.githubusercontent.com/65961408/104789407-5412c200-57d8-11eb-99ef-17292c6b6b8c.gif)
-![data](https://user-images.githubusercontent.com/65961408/108493927-47f3b600-72ea-11eb-9ad8-340974e7b5dc.gif)
+![data](https://user-images.githubusercontent.com/65961408/108494728-3bbc2880-72eb-11eb-8e82-cc7a67f8ee83.gif)
 
 ##### チャット機能
 
@@ -35,6 +35,6 @@
 * チャット機能
 (FirebaseStore)
 * 写真投稿機能
-(FirebaseStorage,FireBaseStore, SDWebImage)
-
- 
+(FirebaseStorage,FireBaseStore,SDWebImage)
+* 写真データ
+(SDWebImage,CoreLocation,MapKit)
