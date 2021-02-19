@@ -7,9 +7,14 @@
 
 import UIKit
 import SDWebImage
+import CoreLocation
+import MapKit
 
 
-class FishDataViewController: UIViewController {
+class FishDataViewController: UIViewController,CLLocationManagerDelegate {
+    
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     
     @IBOutlet weak var fishDataName: UILabel!
@@ -21,6 +26,7 @@ class FishDataViewController: UIViewController {
     @IBOutlet weak var commentText: UITextView!
     
     @IBOutlet weak var sharePlaceLabel: UILabel!
+    
     
     var shareName1:String = ""
     
@@ -41,30 +47,68 @@ class FishDataViewController: UIViewController {
         
         commentText.text = commentData
         
+        mapSearch()
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
         
-        
-    }
-    
-    @IBAction func shareButton(_ sender: Any) {
-        
-        let image = fishDataImage.image?.jpegData(compressionQuality: 0.1)
-        
-        let comment = commentText.text
-        
-        let item = [image,comment as Any]
-        
-        let activityVC = UIActivityViewController(activityItems: item, applicationActivities: nil)
-        
-        self.present(activityVC, animated: true, completion: nil)
-        
     }
     
     
+
+    
+    func mapSearch() {
+        
+        if let searchKey = sharePlaceLabel.text {
+            
+            print(searchKey)
+            let geocoder = CLGeocoder()
+            
+            geocoder.geocodeAddressString(searchKey) { (placemarks, error) in
+                
+
+                            
+                if let unwrapPlacemarks = placemarks {
+                    if let firstPlacemarks = unwrapPlacemarks.first {
+
+                        if let location = firstPlacemarks.location {
+                    
+                            
+                            let targetCoordinate = location.coordinate
+
+                            print(targetCoordinate)
+                            
+                 
+
+                            let pin = MKPointAnnotation()
+
+                            pin.coordinate = targetCoordinate
+
+                            pin.title = searchKey
+
+                            self.mapView.addAnnotation(pin)
+
+                            self.mapView.region = MKCoordinateRegion(center: targetCoordinate, latitudinalMeters: 1000.0, longitudinalMeters: 1000.0)
+
+                        }
+
+
+
+                    }
+
+
+                }
+            }
+            
+            
+        }
+        
+    }
+  
     
     
 }

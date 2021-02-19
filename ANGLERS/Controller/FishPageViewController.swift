@@ -78,7 +78,10 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
                        let docID = data["docID"]as? String,let userName = data["userName"]as? String,let comment = data["comment"]as? String {
                         
                         
+                        
                         let fishs = FishLists(fishName: fishName, fishImage: fishImage, fishPlace: fishPlace, docID: docID, userName: userName, comment: comment)
+                        
+                        
                         
                         self.dataSets.append(fishs)
                         

@@ -34,6 +34,7 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
     var userID = String()
     
     
+    var idString = String()
     
     
     override func viewDidLoad() {
@@ -56,6 +57,23 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
         self.parent?.navigationItem.hidesBackButton = true
 
         
+        //
+        if UserDefaults.standard.object(forKey: "documentID") != nil{
+            
+            
+            idString = UserDefaults.standard.object(forKey: "documentID") as! String
+            
+            
+        }else{
+            
+            idString = dashBord1.collection("FishName").document().path
+            print(idString)
+            
+            idString = String(idString.dropFirst(9))
+            UserDefaults.standard.setValue(idString, forKey: "documentID")
+            
+        }
+        //
         
     }
     
@@ -106,6 +124,8 @@ class FishRegistarViewController: UIViewController,UIImagePickerControllerDelega
             
             
             fishDataModel.fishImageData(data1: data!, nameData: fishNameTextField.text!,fishPlace: fishPlace.text!,email: (Auth.auth().currentUser?.email)!,userName: (Auth.auth().currentUser?.displayName)!, comment: commentTextField.text!)
+
+           
             
             
         }

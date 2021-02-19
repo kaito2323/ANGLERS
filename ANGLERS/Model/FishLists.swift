@@ -15,5 +15,6 @@ struct FishLists{
     let docID:String
     let userName:String
     let comment:String
+    
 }
 

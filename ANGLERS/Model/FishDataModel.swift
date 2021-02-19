@@ -16,15 +16,13 @@ class FishDataModel {
     
     var dashbord = Firestore.firestore()
 
-    
     init() {
         
     }
-  
-
-
 
     func fishImageData(data1:Data,nameData:String,fishPlace:String,email:String,userName:String,comment:String){
+    
+    
         //ストレージサーバのfishImageに保存
         let imageRef = Storage.storage().reference().child("fishImage").child("\(UUID().uuidString + String(Date().timeIntervalSince1970)).jpg")
         
@@ -49,10 +47,11 @@ class FishDataModel {
                 }
                 
                 
-                
-        
                 dashbord.collection("FishName").document().setData(["fishName":nameData ,"fishImage":url?.absoluteString as Any,"fishPlace":fishPlace,"docID": email,"userName": userName,"comment":comment,"postDate":Date().timeIntervalSince1970])
+                
+                
 
+               
                 
             }
             
