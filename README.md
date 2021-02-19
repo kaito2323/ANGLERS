@@ -12,9 +12,10 @@
 ![login](https://user-images.githubusercontent.com/65961408/104663189-cf5c7100-570f-11eb-88d2-ac9b4bce6652.gif)
 
 
-##### 写真共有
+##### 写真共有、写真データ
 
 ![share](https://user-images.githubusercontent.com/65961408/104789407-5412c200-57d8-11eb-99ef-17292c6b6b8c.gif)
+![data](https://user-images.githubusercontent.com/65961408/108493927-47f3b600-72ea-11eb-9ad8-340974e7b5dc.gif)
 
 ##### チャット機能
 
