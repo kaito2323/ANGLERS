@@ -45,11 +45,7 @@ class FishPageViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         self.parent?.navigationItem.title = "みんなの投稿"
         
-        
-        
         loadData()
-        
-        
     }
     
     
