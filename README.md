@@ -12,7 +12,7 @@
 ![login](https://user-images.githubusercontent.com/65961408/104663189-cf5c7100-570f-11eb-88d2-ac9b4bce6652.gif)
 
 
-##### 写真共有、写真データ
+##### 写真投稿、共有、魚データや釣れた場所のマップ表示
 
 ![share](https://user-images.githubusercontent.com/65961408/104789407-5412c200-57d8-11eb-99ef-17292c6b6b8c.gif)
 ![data](https://user-images.githubusercontent.com/65961408/108494728-3bbc2880-72eb-11eb-8e82-cc7a67f8ee83.gif)
